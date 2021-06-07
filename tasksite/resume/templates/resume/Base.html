@@ -16,18 +16,10 @@
             <img src="{% static 'resume/images/icon.jpg' %}" alt="" height="474" width="474"/>
         </section>
         <section>
-            <h2>Желаемая должность</h2>
-            <p>{{job}}</p>
-            <h2>Опыт работы</h2>
-            <p>{{exp}}</p>
-            <h2>Образование</h2>
-            <p>{{edu}}</p>
-            <h2>Курсы</h2>
-            <p>{{courses}}</p>
-            <h2>Ключевые навыки</h2>
-            <p>{{skills}}</p>
-            <h2>Дополнительная информация</h2>
-            <p>{{add}}</p>
+            {% for key, value in fill %}
+            <h2>{{key}}</h2>
+            <p>{{value}}</p>
+            {% endfor %}
         </section>
     </article>
 </body>
